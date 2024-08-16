@@ -1,8 +1,7 @@
-import React from 'react';
 import { TodoTemplateBlock } from './styles.css';
 
 type CompProps = {
-  children: string;
+  children: React.ReactNode;
 };
 
 export default function TodoTemplate({ children }: CompProps) { 

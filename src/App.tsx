@@ -1,11 +1,12 @@
 import './App.css'
 import TodoTempalte from './components/TodoTemplate'
+import TodoHead from './components/TodoHead'
 
 function App() {
 
   return (
     <>
-      <TodoTempalte>안녕하세요</TodoTempalte>
+      <TodoTempalte><TodoHead /></TodoTempalte>
     </>
   )
 }
