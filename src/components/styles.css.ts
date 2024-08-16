@@ -10,7 +10,7 @@ export const TodoTemplateBlock = style({
   borderRadius: '16px',
   boxShadow: '0 0 8px 0 rgba(0, 0, 0, 0.04)',
   margin: '0 auto',
-  marginTop: '96px',
+  marginTop: '66px',
   marginBottom: '32px',
   display: 'flex',
   flexDirection: 'column'
@@ -185,5 +185,6 @@ export const Input = styled('input',{
   padding: '12px',
   borderRadius: '4px',
   border: '1px solid #dee2e6',
-  width: '94%'
+  width: '94%',
+  outline: 'none'
 })
