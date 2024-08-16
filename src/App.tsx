@@ -6,7 +6,6 @@ import TodoCreate from './components/TodoCreate'
 import { TodoProvider } from './components/TodoContext'
 
 function App() {
-
   return (
     <TodoProvider>
       <TodoTempalte>

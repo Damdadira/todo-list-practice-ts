@@ -1,12 +1,12 @@
 import React, { createContext, useReducer, useContext, useRef } from 'react';
 
-type CompProps = {
-  id: number,
-  text: string,
-  done: boolean
+type todoProps = {
+  id: number;
+  text: string;
+  done: boolean;
 }
 
-const initialTodos = [
+const initialTodos: todoProps[] = [
   {
     id: 1,
     text: '프로젝트 생성하기',
@@ -29,22 +29,17 @@ const initialTodos = [
   }
 ];
 
-type reducerProps = {
-  // state: string[],
-  // action: {
-  //   type: string,
-  //   todo: {
-  //     id: number,
-  //     done: boolean
-  //   },
-  //   id: number,
-  // } 
+export type State = { id: number, done: boolean}[];
+export type Action = {
+  type: 'CREATE' | 'TOGGLE' | 'REMOVE';
+  todo?: { id: number; done: boolean };
+  id?: number;
 }
 
-function todoReducer({state, action}: reducerProps){
+function todoReducer(state: State, action: Action): State {
   switch(action.type){
     case 'CREATE':
-      return state.concat(action.todo);
+      return state.concat(action.todo!);
     case 'TOGGLE':
       return state.map(todo => todo.id === action.id ? { ...todo, done: !todo.done }: todo);
     case 'REMOVE':
@@ -54,12 +49,12 @@ function todoReducer({state, action}: reducerProps){
   }
 }
 
-const TodoStateContext = createContext();
-const TodoDispatchContext = createContext();
-const TodoNextIdContext = createContext();
+const TodoStateContext = createContext<State | null>(null);
+const TodoDispatchContext = createContext<React.Dispatch<Action> | null>(null);
+const TodoNextIdContext = createContext<React.MutableRefObject<number> | null>(null);
 
 export type todoProvider = {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function TodoProvider({children}: todoProvider){

@@ -2,8 +2,8 @@ import { MdDone, MdDelete } from 'react-icons/md';
 import { TodoItemBlock, CheckCircle, Text, Remove } from './styles.css';
 
 type CompProps = {
-  done: boolean,
-  text: string
+  done: boolean;
+  text: string;
 }
 
 export default function TodoItem({done, text}: CompProps){
