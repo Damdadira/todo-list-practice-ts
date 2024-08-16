@@ -1,5 +1,6 @@
 import { globalStyle, style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
+import { styled } from '@dessert-box/react';
 
 export const TodoTemplateBlock = style({
   width: '512px',
@@ -98,7 +99,10 @@ export const CheckCircle = recipe({
 
   variants: {
     done: {
-      true: { border: '1px solid #38d9a9', color: '#38d9a9' }
+      true: { 
+        border: '1px solid #38d9a9', 
+        color: '#38d9a9' 
+      }
     }
   }
 });
@@ -115,4 +119,71 @@ export const Text = recipe({
       true: { color: '#ced4da' }
     }
   }
+})
+
+export const CircleButton = recipe({
+  base: {
+    background: '#38d9a9',
+    ":hover":{
+      background: '#63e6be'
+    },
+    ":active":{
+      background: '#20c997'
+    },
+    zIndex: 5,
+    cursor: 'pointer',
+    width: '80px',
+    height: '80px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '60px',
+    position: 'absolute',
+    left: '50%',
+    bottom: '0px',
+    transform: 'translate(-50%, 50%)',
+    color: 'white',
+    borderRadius: '50%',
+    border: 'none',
+    outline: 'none',
+    transition: '0.125s all ease-in'
+  },
+
+  variants: {
+    open: {
+      true: {
+        background: '#ff6b6b',
+        ":hover":{
+          background: '#ff8787',
+        },
+        ":active":{
+          background: 'fa5252'
+        },
+        transform: 'translate(-50%, 50%) rotate(45deg)'
+      }
+    }
+  }
+})
+
+export const InsertFormPositioner = style({
+  width: '100%',
+  bottom: 0,
+  left: 0,
+  position: 'absolute'
+
+})
+
+export const InsertForm = styled('form',{
+  background: '#f8f9fa',
+  padding: '32px 32px 72px 32px',
+  borderBottomLeftRadius: '16px',
+  borderBottomRightRadius: '16px',
+  borderTop: '1px solid #e9ecef'
+})
+
+export const Input = styled('input',{
+  padding: '12px',
+  borderRadius: '4px',
+  border: '1px solid #dee2e6',
+  width: '94%'
 })
