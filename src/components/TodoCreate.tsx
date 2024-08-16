@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MdAdd } from 'react-icons/md';
 import { CircleButton, InsertFormPositioner, InsertForm, Input } from './styles.css';
 

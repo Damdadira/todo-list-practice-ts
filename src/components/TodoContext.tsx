@@ -29,10 +29,10 @@ const initialTodos: todoProps[] = [
   }
 ];
 
-export type State = { id: number, done: boolean}[];
+export type State = { id: number, text: string, done: boolean}[];
 export type Action = {
   type: 'CREATE' | 'TOGGLE' | 'REMOVE';
-  todo?: { id: number; done: boolean };
+  todo?: { id: number; text: string, done: boolean };
   id?: number;
 }
 
