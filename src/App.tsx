@@ -1,11 +1,11 @@
-import React from 'react'
 import './App.css'
+import TodoTempalte from './components/TodoTemplate'
 
 function App() {
 
   return (
     <>
-      hi
+      <TodoTempalte>안녕하세요</TodoTempalte>
     </>
   )
 }
