@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# To-do List
+<br/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+ <img src="/src/assets/imgs/img_todolist.png" alt="image"/>
+</div>
+<br/><br/>
 
-Currently, two official plugins are available:
+## 💡 주요 기능 및 구현
+<details>
+  <summary><h3 style="display:inline; margin-left:4px">1️⃣ 추가</h3></summary>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  - **아이템 추가:** 텍스트 입력 후 'Enter'를 누르면 아이템을 하나씩 추가할 수 있습니다.
+  
+    <img src="/src/assets/imgs/video_todolist_add.gif" alt="video"/>
+</details>
 
-## Expanding the ESLint configuration
+<details>
+  <summary><h3 style="display:inline; margin-left:4px">2️⃣ 삭제</h3></summary>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  - **아이템 삭제:** 리스트 오른쪽에 있는 휴지통을 클릭하여 아이템을 하나씩 삭제할 수 있습니다.
+  
+    <img src="/src/assets/imgs/video_todolist_remove.gif" alt="video"/>
+</details>
 
-- Configure the top-level `parserOptions` property like this:
+<details>
+  <summary><h3 style="display:inline; margin-left:4px">3️⃣ 완료</h3></summary>
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+  - **완료된 아이템 체크:** 리스트 왼쪽에 있는 체크박스를 클릭하면 스타일과 남은 할 일의 개수가 변경됩니다.
+  
+    <img src="/src/assets/imgs/video_todolist_complete.gif" alt="video"/>
+</details>
+<br/>
+
+## 🧩 폴더 구조
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+📦 src
+┣ 📂assets
+┃ ┣ 📂imgs
+┃ ┗ 📜react.svg
+┣ 📂components           // 주요 UI 컴포넌트 모음
+┃ ┣ 📜TodoContext.tsx    // Todo 상태 관리용 Context API
+┃ ┣ 📜TodoCreate.tsx     // 새로운 할 일 항목 추가 입력창
+┃ ┣ 📜TodoHead.tsx       // 상단 날짜 및 남은 할 일 수 표시
+┃ ┣ 📜TodoItem.tsx       // 개별 할 일 항목 표시 및 체크/삭제
+┃ ┣ 📜TodoList.tsx       // 할 일 리스트 렌더링
+┃ ┣ 📜TodoTemplate.tsx   // 전체 앱 레이아웃 템플릿
+┃ ┗ 📜styles.css.ts      // 공통 스타일 정의 (vanilla-extract)
+┣ 📜App.tsx
+┣ 📜App.css.ts
+┣ 📜main.tsx
+┣ 📜index.css
+┗ 📜vite-env.d.ts
 ```
+<br/>
+
+## 🛠 기술 스택
+#### 🕹 프론트엔드
+<div>
+  <img src="https://img.shields.io/badge/React-%2320232a.svg?style=flat-square&logo=react&logoColor=%2361DAFB" />&nbsp;
+  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white" />&nbsp;
+  <img src="https://img.shields.io/badge/Context--Api-000000?style=flat-square&logo=react" />&nbsp;
+  <img src="https://img.shields.io/badge/vanilla--extract-%2324C8DB.svg?style=flat-square&logoColor=white" />&nbsp;
+  <img src="https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat-square&logo=vite&logoColor=white" />&nbsp;
+</div>
+<br/>
+
+#### 🚀 배포 도구
+<img src="https://img.shields.io/badge/Netlify-%23000000.svg?style=flat-square&logo=netlify&logoColor=#00C7B7">
+<br/>
+
+## 📍 홈페이지 주소
+https://tubular-sherbet-6ac6c7.netlify.app/
