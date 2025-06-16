@@ -1,13 +1,7 @@
 # 투두리스트
-
-<h3 align="center">
-  📍 <a href="https://tubular-sherbet-6ac6c7.netlify.app/" target="_blank">프로젝트 바로가기</a>
-</h3>
-
 <div align="center">
   <img src="/src/assets/imgs/img_todolist.png" alt="todolist preview" />
 </div>
-
 <br/><br/>
 
 ## 💡 주요 기능 및 구현
@@ -84,3 +78,7 @@ npm install   # 또는 npm i
 # 개발 서버 실행
 npm start
 ```
+<br/>
+
+## 📍 홈페이지 주소
+https://tubular-sherbet-6ac6c7.netlify.app/
