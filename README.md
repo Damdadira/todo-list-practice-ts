@@ -58,7 +58,7 @@
 #### 🕹 프론트엔드
 <div>
   <img src="https://img.shields.io/badge/React-%2320232a.svg?style=flat-square&logo=react&logoColor=%2361DAFB" />&nbsp;
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white" />&nbsp;
+  <img src="https://img.shields.io/badge/Typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/Context--Api-000000?style=flat-square&logo=react" />&nbsp;
   <img src="https://img.shields.io/badge/vanilla--extract-%2324C8DB.svg?style=flat-square&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat-square&logo=vite&logoColor=white" />&nbsp;
