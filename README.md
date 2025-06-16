@@ -81,4 +81,8 @@ npm start
 <br/>
 
 ## 📍 홈페이지 주소
+<a href="https://tubular-sherbet-6ac6c7.netlify.app/" target="_blank" rel="noopener noreferrer">
+  https://tubular-sherbet-6ac6c7.netlify.app/
+</a>
+
 https://tubular-sherbet-6ac6c7.netlify.app/
