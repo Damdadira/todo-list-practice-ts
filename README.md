@@ -1,4 +1,4 @@
-# 투두리스트
+# To-do List
 <div align="center">
   <img src="/src/assets/imgs/img_todolist.png" alt="todolist preview" />
 </div>
